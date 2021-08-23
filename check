@@ -1,0 +1,14 @@
+display_todos:function(){
+    if(this.find_flg){
+      let arr = [];
+      let data = this.todos;
+      data.forEach(element =>{
+        if(element.state == this.find_state){
+          arr.push(element);
+        }
+      });
+      return arr;
+    }else{
+      return this.todos;
+    }
+  }
